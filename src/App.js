@@ -1,11 +1,19 @@
+import Header from "./components/Header";
+import InputForm from "./components/InputForm";
+import ToDos from "./components/ToDos";
+import Crawler from "./components/Crawl";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <Header />
+      <InputForm />
 
-      <h1>To dos here</h1>
+      <ToDos />
+      <Crawler />
+      <Footer />
     </div>
   );
 }
