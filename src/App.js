@@ -10,9 +10,9 @@ function App() {
     <div className="App">
       <Header />
       <InputForm />
-
-      <ToDos />
       <Crawler />
+      <ToDos />
+
       <Footer />
     </div>
   );
