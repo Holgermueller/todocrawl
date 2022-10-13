@@ -6,35 +6,14 @@ export default function Crawler() {
   return (
     <section>
       <div className="crawl-feed">
-        {todos.map((todo, i) => (
-          <span key={i}> {todo.name}</span>
-        ))}
+        <div className="crawl">
+          {todos.map((todo, i) => (
+            <div className="crawl-item" key={i}>
+              {todo.name}
+            </div>
+          ))}
+        </div>
       </div>
-
-      <div className="crawl-feed crawl-feed-two">
-        {todos.map((todo, i) => (
-          <span key={i}> {todo.name}</span>
-        ))}
-      </div>
-
-      {/* <div className="crawl-feed crawl-feed-two">
-        <span>{todos.map((todo) => todo.name)}</span>
-      </div> */}
-
-      {/* <div className="crawl-feed">
-        {todos.map((todo, i) => (
-          <span key={i} className="todo">
-            {todo.name}
-          </span>
-        ))}
-      </div>
-      <div className="crawl-feed crawl-feed-two">
-        {todos.map((todo, i) => (
-          <span key={i} className="todo">
-            {todo.name}
-          </span>
-        ))}
-      </div> */}
     </section>
   );
 }

@@ -7,21 +7,27 @@ header {
   background-color: #080808;
   color: #f8f8f8;
   font-size: 2rem;
-  padding: 0.5rem;
-  white-space: nowrap;
-
-  position: absolute;
-  width: 100%;
-}
-
-.crawl-feed span {
-  display: inline-block;
   padding-left: 100%;
-  animation: crawl 20s linear infinite;
+  white-space: nowrap;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 4rem;
 }
 
-.crawl-feed-two span {
-  animation-delay: 2.5s;
+.crawl {
+  display: inline-block;
+  padding-right: 100%;
+  white-space: nowrap;
+  animation: crawl 20s linear infinite;
+  height: 4rem;
+  line-height: 4rem;
+}
+
+.crawl-item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 2rem;
 }
 
 @keyframes crawl {
