@@ -3,7 +3,7 @@ export default function InputForm() {
     <section>
       <form className="form">
         <input className="input" type="text" placeholder="To do..." />
-        <input className="button" type="button" value="submit" />
+        <input className="button" type="button" value="Submit" />
       </form>
     </section>
   );
