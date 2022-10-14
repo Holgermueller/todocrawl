@@ -10,7 +10,16 @@ export const todoSlice = createSlice({
       { name: "make dinner" },
     ],
   },
-  reducers: {},
+  reducers: {
+    addTodo(state, action) {
+      console.log(state.todos);
+      state.todos.push({
+        name: action.payload.todoData,
+      });
+    },
+    removeTodo(state, action) {},
+  },
 });
 
+export const { addTodo } = todoSlice.actions;
 export default todoSlice.reducer;

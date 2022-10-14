@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTodo } from "../features/todos/todoSlice";
 
 export default function InputForm() {
   const [formData, setFormData] = useState({
@@ -6,6 +8,8 @@ export default function InputForm() {
   });
 
   const { todo } = formData;
+
+  const dispatch = useDispatch();
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -17,12 +21,20 @@ export default function InputForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(todo);
+    if (todo === "") {
+      alert("Error: Please fill out the field!");
+    }
+
+    const todoData = { todo };
+
+    dispatch(addTodo(todoData));
+
+    setFormData({ todo: "" });
   };
 
   return (
     <section>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form">
         <input
           className="input"
           name="todo"
@@ -31,7 +43,12 @@ export default function InputForm() {
           value={todo}
           onChange={onChange}
         />
-        <input className="button" type="submit" value="Submit" />
+        <input
+          className="button"
+          type="submit"
+          onClick={handleSubmit}
+          value="Submit"
+        />
       </form>
     </section>
   );
