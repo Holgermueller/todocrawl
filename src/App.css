@@ -45,9 +45,9 @@ section {
   font-size: 2rem;
   padding-left: 100%;
   white-space: nowrap;
-
   overflow: hidden;
-  width: 100%;
+  width: 85%;
+  margin: 0.25rem auto;
   height: 4rem;
 }
 
@@ -85,13 +85,28 @@ section {
 
 .todo-item {
   text-align: center;
+  background-color: #baf73c;
+  margin: 0.25rem;
+  min-height: 300px;
 }
 
 footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  position: absolute;
+  position: relative;
   font-size: 1.25 rem;
   color: var(--blackColor);
+}
+
+@media (max-width: 800px) {
+  .todo-grid {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 414px) {
+  .todo-grid {
+    grid-template-columns: auto;
+  }
 }
