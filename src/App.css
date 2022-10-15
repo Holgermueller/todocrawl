@@ -4,13 +4,23 @@
   --main-color: #085b68;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 header {
   font-size: 2rem;
   font-weight: 300;
   text-align: center;
   background-color: var(--main-color);
   color: var(--white-color);
-  padding: 0.25rem;
+  padding: 0.25rem 0.5rem;
   width: max-content;
   margin: auto;
   border-radius: 5px;
@@ -45,10 +55,11 @@ section {
   font-size: 2rem;
   padding-left: 100%;
   white-space: nowrap;
+  width: 100%;
   overflow: hidden;
-  width: 85%;
   margin: 0.25rem auto;
   height: 4rem;
+  box-sizing: content-box;
 }
 
 .crawl {
@@ -58,6 +69,7 @@ section {
   animation: crawl 20s linear infinite;
   height: 4rem;
   line-height: 4rem;
+  box-sizing: content-box;
 }
 
 .crawl-item {
@@ -68,11 +80,12 @@ section {
 
 @keyframes crawl {
   0% {
-    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
   }
 
   100% {
-    transform: translate(-100%, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 
@@ -90,6 +103,18 @@ section {
   min-height: 300px;
 }
 
+.done-button-container {
+  width: 100%;
+  display: flex;
+}
+
+.done-button {
+  bottom: 0;
+  left: 0;
+  position: relative;
+  align-self: flex-end;
+}
+
 footer {
   bottom: 0;
   left: 0;
@@ -97,6 +122,8 @@ footer {
   position: relative;
   font-size: 1.25 rem;
   color: var(--blackColor);
+  padding: 4px;
+  text-align: center;
 }
 
 @media (max-width: 800px) {

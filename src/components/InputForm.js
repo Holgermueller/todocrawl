@@ -4,10 +4,10 @@ import { addTodo } from "../features/todos/todoSlice";
 
 export default function InputForm() {
   const [formData, setFormData] = useState({
-    todo: "",
+    name: "",
   });
 
-  const { todo } = formData;
+  const { name } = formData;
 
   const dispatch = useDispatch();
 
@@ -21,26 +21,28 @@ export default function InputForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (todo === "") {
+    if (name === "") {
       alert("Error: Please fill out the field!");
     }
 
-    const todoData = { todo };
+    const todoData = { name };
+
+    console.log(todoData);
 
     dispatch(addTodo(todoData));
 
-    setFormData({ todo: "" });
+    setFormData({ name: "" });
   };
 
   return (
-    <section>
+    <section className="to-do-form">
       <form className="form">
         <input
           className="input"
-          name="todo"
+          name="name"
           type="text"
           placeholder="To do..."
-          value={todo}
+          value={name}
           onChange={onChange}
         />
         <input

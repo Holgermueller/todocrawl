@@ -4,7 +4,7 @@ export default function Crawler() {
   const { todos } = useSelector((state) => state.todos);
 
   return (
-    <section>
+    <section className="crawl-section">
       <div className="crawl-feed">
         <div className="crawl">
           {todos.map((todo, i) => (
