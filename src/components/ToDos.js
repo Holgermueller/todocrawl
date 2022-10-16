@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
-import { removeTodo } from "../features/todos/todoSlice";
+//import { removeTodo } from "../features/todos/todoSlice";
 
 export default function ToDos() {
   const { todos } = useSelector((state) => state.todos);
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
 
   return (
     <section className="to-do-list">
@@ -11,7 +11,7 @@ export default function ToDos() {
         {todos.map((todo, i) => (
           <div className="todo-item" key={i}>
             <div className="todo-name">{todo.name}</div>
-            <div className="done-button-container">
+            {/* <div className="done-button-container">
               <button
                 id={todo.id}
                 className="done-button"
@@ -19,7 +19,7 @@ export default function ToDos() {
               >
                 DONE
               </button>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
