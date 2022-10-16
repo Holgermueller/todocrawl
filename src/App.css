@@ -93,14 +93,20 @@ section {
   width: 85%;
   margin: 8px auto;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .todo-item {
   text-align: center;
   background-color: #baf73c;
-  margin: 0.25rem;
+  margin: 0.25rem auto;
   min-height: 300px;
+  width: 95%;
+}
+
+.todo-name {
+  font-weight: bold;
+  padding: 8px;
 }
 
 .done-button-container {
@@ -129,12 +135,12 @@ footer {
 
 @media (max-width: 800px) {
   .todo-grid {
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 414px) {
   .todo-grid {
-    grid-template-columns: auto;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
