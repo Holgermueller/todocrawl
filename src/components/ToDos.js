@@ -1,7 +1,15 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function ToDos() {
   const { todos } = useSelector((state) => state.todos);
+  const dispatch = useDispatch();
+
+  const removeTodo = (e) => {
+    console.log(e.target.id);
+    const todoToRemove = e.target.id;
+
+    dispatch(removeTodo(todoToRemove));
+  };
 
   return (
     <section className="to-do-list">
@@ -10,7 +18,13 @@ export default function ToDos() {
           <div className="todo-item" key={i}>
             {todo.name}
             <div className="done-button-container">
-              <button className="done-button">DONE</button>
+              <button
+                id={todo.name}
+                className="done-button"
+                onClick={removeTodo}
+              >
+                DONE
+              </button>
             </div>
           </div>
         ))}

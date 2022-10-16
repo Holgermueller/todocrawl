@@ -104,15 +104,16 @@ section {
 }
 
 .done-button-container {
+  height: 100%;
   width: 100%;
-  display: flex;
+  display: grid;
+  place-items: center;
 }
 
 .done-button {
   bottom: 0;
   left: 0;
   position: relative;
-  align-self: flex-end;
 }
 
 footer {

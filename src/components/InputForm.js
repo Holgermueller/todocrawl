@@ -27,8 +27,6 @@ export default function InputForm() {
 
     const todoData = { name };
 
-    console.log(todoData);
-
     dispatch(addTodo(todoData));
 
     setFormData({ name: "" });
