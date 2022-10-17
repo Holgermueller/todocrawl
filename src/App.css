@@ -108,6 +108,10 @@ section {
 }
 
 .todo-item:hover {
+  z-index: 3;
+  width: 120%;
+  font-size: 1.5rem;
+  margin: auto;
   background-image: linear-gradient(
     135deg,
     var(--secondary-color),
@@ -166,7 +170,7 @@ footer {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 500px) {
   .todo-grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
