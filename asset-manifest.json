@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.9b1c07b4.css",
-    "main.js": "/static/js/main.ceeb16d9.js",
-    "static/js/787.c6050928.chunk.js": "/static/js/787.c6050928.chunk.js",
-    "index.html": "/index.html",
-    "main.9b1c07b4.css.map": "/static/css/main.9b1c07b4.css.map",
-    "main.ceeb16d9.js.map": "/static/js/main.ceeb16d9.js.map",
-    "787.c6050928.chunk.js.map": "/static/js/787.c6050928.chunk.js.map"
+    "main.css": "/todocrawl/static/css/main.cacd521a.css",
+    "main.js": "/todocrawl/static/js/main.5f8f9450.js",
+    "static/js/787.c6050928.chunk.js": "/todocrawl/static/js/787.c6050928.chunk.js",
+    "index.html": "/todocrawl/index.html",
+    "main.cacd521a.css.map": "/todocrawl/static/css/main.cacd521a.css.map",
+    "main.5f8f9450.js.map": "/todocrawl/static/js/main.5f8f9450.js.map",
+    "787.c6050928.chunk.js.map": "/todocrawl/static/js/787.c6050928.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b1c07b4.css",
-    "static/js/main.ceeb16d9.js"
+    "static/css/main.cacd521a.css",
+    "static/js/main.5f8f9450.js"
   ]
 }
